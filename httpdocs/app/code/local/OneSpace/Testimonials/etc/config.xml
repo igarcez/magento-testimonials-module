@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <OneSpace_Testimonials>
+      <version>0.1.0</version>
+    </OneSpace_Testimonials>
+  </modules>
+  <global>
+    <helpers>
+      <testimonials>
+        <class>OneSpace_Testimonials_Helper</class>
+      </testimonials>
+    </helpers>
+  </global>
+</config>
