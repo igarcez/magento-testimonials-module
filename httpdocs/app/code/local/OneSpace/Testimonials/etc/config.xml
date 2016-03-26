@@ -11,5 +11,74 @@
         <class>OneSpace_Testimonials_Helper</class>
       </testimonials>
     </helpers>
+    <models>
+      <testimonials>
+        <class>OneSpace_Testimonials_Model</class>
+        <resourceModel>testimonials_mysql4</resourceModel>
+      </testimonials>
+      <testimonials_mysql4>
+        <class>OneSpace_Testimonials_Model_Mysql4</class>
+        <entities>
+          <testimonial>
+            <table>testimonials</table>
+          </testimonial>
+        </entities>
+      </testimonials_mysql4>
+    </models>
+    <blocks>
+      <testimonials>
+        <class>OneSpace_Testimonials_Block</class>
+      </testimonials>
+    </blocks>
+    <resources>
+      <testimonials_write>
+        <connection>
+          <use>core_write</use>
+        </connection>
+      </testimonials_write>
+      <testimonials_read>
+        <connection>
+          <use>core_read</use>
+        </connection>
+      </testimonials_read>
+      <testimonials_setup>
+        <setup>
+          <module>OneSpace_Testimonials</module>
+          <class>OneSpace_Testimonials_Model_Resource_Mysql4_Setup</class>
+        </setup>
+        <connection>
+          <use>core_setup</use>
+        </connection>
+      </testimonials_setup>
+    </resources>
   </global>
+  <frontend>
+    <routers>
+      <testimonials>
+        <use>standard</use>
+        <args>
+          <module>OneSpace_Testimonials</module>
+          <frontName>testimonials</frontName>
+        </args>
+      </testimonials>
+    </routers>
+    <layout>
+      <updates>
+        <testimonials>
+          <file>onespace/testimonials.xml</file>
+        </testimonials>
+      </updates>
+    </layout>
+  </frontend>
+  <admin>
+    <routers>
+      <adminhtml>
+        <args>
+          <modules>
+            <OneSpace_Testimonials after="Mage_Adminhtml">OneSpace_Testimonials</OneSpace_Testimonials>
+          </modules>
+        </args>
+      </adminhtml>
+    </routers>
+  </admin>
 </config>

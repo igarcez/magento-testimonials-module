@@ -1,0 +1,15 @@
+<h1>Testimonials</h1>
+<?php $collection = $this->getCollection() ?>
+<?php if ($collection): ?>
+  <?php foreach ($collection as $testimonial): ?>
+    <blockquote>
+      <?php echo $testimonial->getPost() ?>
+    </blockquote>
+    <p><strong><?php echo $this->__('Author: ') ?><?php echo $testimonial->getCustomerName() ?></strong></p>
+    <br />
+  <?php endforeach ?>
+  <?php echo $this->getPagerHtml() ?>
+<?php else: ?>
+  <!-- TODO add a 'add first' link here -->
+  <p>There is no testimonial yet</p>
+<?php endif ?>
