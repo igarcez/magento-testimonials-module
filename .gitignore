@@ -36,8 +36,18 @@ httpdocs/.modman/
 httpdocs/app/code/community/Phoenix/Moneybookers/
 httpdocs/app/code/community/Cm/RedisSession/
 httpdocs/app/code/core/
+httpdocs/app/code/local/Alanstormdotcom
 httpdocs/app/design/adminhtml/default/default/
-httpdocs/app/design/frontend/base/
+!httpdocs/app/design/frontend/base/
+httpdocs/app/design/frontend/base/*
+!httpdocs/app/design/frontend/base/default
+httpdocs/app/design/frontend/base/default/*
+!httpdocs/app/design/frontend/base/default/template
+!httpdocs/app/design/frontend/base/default/layout
+httpdocs/app/design/frontend/base/default/template/*
+httpdocs/app/design/frontend/base/default/layout/*
+!httpdocs/app/design/frontend/base/default/template/onespace
+!httpdocs/app/design/frontend/base/default/layout/onespace
 httpdocs/app/design/frontend/rwd/
 httpdocs/app/design/frontend/default/blank/
 httpdocs/app/design/frontend/default/default/
@@ -49,6 +59,7 @@ httpdocs/app/etc/modules/Enterprise_*
 httpdocs/app/etc/modules/Mage_*.xml
 httpdocs/app/etc/modules/Phoenix_Moneybookers.xml
 httpdocs/app/etc/modules/Cm_RedisSession.xml
+httpdocs/app/etc/modules/Alanstormdotcom_Layoutviewer.xml
 httpdocs/app/etc/applied.patches.list
 httpdocs/app/etc/config.xml
 httpdocs/app/etc/enterprise.xml
