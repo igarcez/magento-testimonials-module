@@ -11,10 +11,16 @@ class OneSpace_Testimonials_IndexController extends Mage_Core_Controller_Front_A
   }
 
   public function saveAction() {
+    $core_session = Mage::getSingleton('core/session');
     $customer_session = Mage::getSingleton('customer/session');
-    if(!$customer_session->isLoggedIn()) die('must be logged');
+    if(!$customer_session->isLoggedIn())
+    {
+      $core_session->AddError('You must be logged in!');
+      $this->_redirect('customer/account');
+      return;
+    }
     Mage::getModel('testimonials/testimonial')->saveNewTestimonial($this->getRequest()->getPost());
-    Mage::getSingleton('core/session')->addSuccess('Thank you for sharing!');
+    $core_session->addSuccess('Thank you for sharing!');
     $this->_redirect('testimonials');
   }
 }
