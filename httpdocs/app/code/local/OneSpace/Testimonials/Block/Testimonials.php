@@ -12,11 +12,10 @@ class OneSpace_Testimonials_Block_Testimonials extends Mage_Core_Block_Template 
   {
     parent::_prepareLayout();
 
-    // TODO change custom to testimonials
-    $pager = $this->getLayout()->createBlock('page/html_pager', 'custom.pager');
+    $pager = $this->getLayout()->createBlock('page/html_pager', 'testimonials.pager');
     $pager->setCollection($this->getCollection());
     $this->setChild('pager', $pager);
-    $this->getCollection()->load();
+    $this->getCollection()->setOrder('testimonial_id', Varien_Data_Collection::SORT_ORDER_DESC)->load();
     return $this;
   }
 

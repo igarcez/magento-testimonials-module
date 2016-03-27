@@ -1,0 +1,12 @@
+<h1>Add New Testimonial</h1>
+<?php if ($this->canPost()): ?>
+<div class="info"><?php echo $this->getMessagesBlock()->getGroupedHtml() ?></div>
+<form action="<?php echo $this->getPostActionUrl() ?>" method="post">
+  <label for="post">What you think of us?</label><br />
+  <textarea name="post" id="post" cols="30" rows="10"></textarea>
+  <br /><br />
+  <button>Send</button>
+</form>
+<?php else: ?>
+  <p>Only registered customers can leave testimonial, login <a href="<?php echo Mage::helper('customer')->getLoginUrl() ?>">here</a></p>
+<?php endif ?>

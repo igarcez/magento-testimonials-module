@@ -16,4 +16,9 @@
       <block type="testimonials/testimonials" name="testimonials" template="onespace/testimonials/list.phtml" />
     </reference>
   </testimonials_index_index>
+  <testimonials_index_create>
+    <reference name="content">
+      <block type="testimonials/form" name="testimonials.form" template="onespace/testimonials/form.phtml" />
+    </reference>
+  </testimonials_index_create>
 </layout>
