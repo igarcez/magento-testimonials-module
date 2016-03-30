@@ -1,23 +1,23 @@
 <?xml version="1.0"?>
 <config>
   <modules>
-    <OneSpace_Testimonials>
+    <Onespace_Testimonials>
       <version>0.1.0</version>
-    </OneSpace_Testimonials>
+    </Onespace_Testimonials>
   </modules>
   <global>
     <helpers>
       <testimonials>
-        <class>OneSpace_Testimonials_Helper</class>
+        <class>Onespace_Testimonials_Helper</class>
       </testimonials>
     </helpers>
     <models>
       <testimonials>
-        <class>OneSpace_Testimonials_Model</class>
+        <class>Onespace_Testimonials_Model</class>
         <resourceModel>testimonials_mysql4</resourceModel>
       </testimonials>
       <testimonials_mysql4>
-        <class>OneSpace_Testimonials_Model_Mysql4</class>
+        <class>Onespace_Testimonials_Model_Mysql4</class>
         <entities>
           <testimonial>
             <table>testimonials</table>
@@ -27,7 +27,7 @@
     </models>
     <blocks>
       <testimonials>
-        <class>OneSpace_Testimonials_Block</class>
+        <class>Onespace_Testimonials_Block</class>
       </testimonials>
     </blocks>
     <resources>
@@ -43,8 +43,8 @@
       </testimonials_read>
       <testimonials_setup>
         <setup>
-          <module>OneSpace_Testimonials</module>
-          <class>OneSpace_Testimonials_Model_Resource_Mysql4_Setup</class>
+          <module>Onespace_Testimonials</module>
+          <class>Onespace_Testimonials_Model_Resource_Mysql4_Setup</class>
         </setup>
         <connection>
           <use>core_setup</use>
@@ -57,7 +57,7 @@
       <testimonials>
         <use>standard</use>
         <args>
-          <module>OneSpace_Testimonials</module>
+          <module>Onespace_Testimonials</module>
           <frontName>testimonials</frontName>
         </args>
       </testimonials>
@@ -75,7 +75,7 @@
       <adminhtml>
         <args>
           <modules>
-            <OneSpace_Testimonials after="Mage_Adminhtml">OneSpace_Testimonials</OneSpace_Testimonials>
+            <onespace_testimonials after="Mage_Adminhtml">Onespace_Testimonials_Adminhtml</onespace_testimonials>
           </modules>
         </args>
       </adminhtml>

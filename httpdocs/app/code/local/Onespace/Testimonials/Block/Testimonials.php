@@ -1,5 +1,5 @@
 <?php
-class OneSpace_Testimonials_Block_Testimonials extends Mage_Core_Block_Template {
+class Onespace_Testimonials_Block_Testimonials extends Mage_Core_Block_Template {
   public function __construct()
   {
     parent::__construct();
