@@ -10,6 +10,15 @@ class Onespace_Testimonials_Model_Testimonial extends Mage_Core_Model_Abstract {
     return Mage::getModel('customer/customer')->load($this->getCustomerId())->getName();
   }
 
+  public function getCustomersAsFormOptions() {
+    $collection = Mage::getModel('customer/customer')->getCollection();
+    $options = array();
+    foreach ($collection as $customer) {
+      $options[] = array('value' => $customer->getId(), 'label' => $customer->getEmail());
+    }
+    return $options;
+  }
+
   public function saveNewTestimonial($post)
   {
     // I rather get the id here, so we can prevent some false post with other

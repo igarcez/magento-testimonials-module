@@ -24,7 +24,8 @@ class Onespace_Testimonials_Block_Adminhtml_Testimonial_Edit_Form extends Mage_A
         ),
       'customer_id' => array(
         'label' => $this->__('Customer Id'),
-        'input' => 'text',
+        'input' => 'select',
+        'values' => Mage::getModel('testimonials/testimonial')->getCustomersAsFormOptions(),
         'required' => true
         )
     ));
